@@ -1,8 +1,9 @@
 package br.com.alura.codechella.infra.gateways;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
-import br.com.alura.codechella.applications.gateways.RepositorioUsuario;
+import br.com.alura.codechella.application.gateways.RepositorioUsuario;
 import br.com.alura.codechella.domain.entities.usuario.Usuario;
 import br.com.alura.codechella.infra.persistence.UsuarioEntity;
 import br.com.alura.codechella.infra.persistence.UsuarioRepository;
@@ -27,8 +28,9 @@ public class RepositorioDeUsuarioJpa implements RepositorioUsuario {
 
     @Override
     public List<Usuario> listarTodos() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'listarTodos'");
+        return repositorio.findAll()
+                .stream().map(mapper::toDomain)
+                .collect(Collectors.toList());
     }
 
 }

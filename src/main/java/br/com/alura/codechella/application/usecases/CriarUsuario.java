@@ -1,6 +1,6 @@
-package br.com.alura.codechella.applications.usecases;
+package br.com.alura.codechella.application.usecases;
 
-import br.com.alura.codechella.applications.gateways.RepositorioUsuario;
+import br.com.alura.codechella.application.gateways.RepositorioUsuario;
 import br.com.alura.codechella.domain.entities.usuario.Usuario;
 
 public class CriarUsuario {

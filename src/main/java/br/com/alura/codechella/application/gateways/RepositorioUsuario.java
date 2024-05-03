@@ -1,4 +1,4 @@
-package br.com.alura.codechella.applications.gateways;
+package br.com.alura.codechella.application.gateways;
 
 import java.util.List;
 
